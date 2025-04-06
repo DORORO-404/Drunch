@@ -1,14 +1,35 @@
-# **Drunch** 🔧
+# Drunch - Custom Wordlist Generator
 
-A simple and customizable **password/crack wordlist generator** written in Python, similar to **crunch**.
+![Project Status](https://img.shields.io/badge/status-active-brightgreen)  
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-## ✨ **Features**
+Welcome to **Drunch**, a Python-based tool inspired by `crunch`. It allows you to generate custom wordlists for use in penetration testing, password research, and ethical hacking.
 
-- **Generate wordlists of custom lengths**
-- **Option to include characters, numbers, and symbols**
-- **Fully customizable output** (upper case, lower case, symbols, etc.)
-- **Terminal-friendly and lightweight**
-- **Option to generate wordlists based on character sets or patterns**
+## 🚀 About The Project
+
+Drunch is a simple, lightweight tool that generates wordlists based on character sets and length ranges. It's designed to replicate and simplify the functionality of the original `crunch` tool, but written fully in Python.
+
+The tool can:
+
+- Generate all possible combinations of a given character set
+- Allow control over minimum and maximum word length
+- Save wordlists to a file or print them directly
+
+## 🛠 Technologies Used
+
+| Language   | Type     |      Requirements     |
+|------------|----------|-----------------------|
+| Python 3.x | CLI Tool | No external libraries |
+
+**Python 3**: The tool is written purely in Python with no third-party dependencies, making it easy to run on most systems.
+
+## ✨ Features
+
+- ✅ Simple and fast wordlist generation
+- ✅ Choose character set, min & max length
+- ✅ Output to file or terminal
+- ✅ Lightweight and beginner-friendly code
+- ✅ Works offline, no dependencies
 
 ## 🧪 **Example Usage**
 

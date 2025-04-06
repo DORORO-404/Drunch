@@ -15,4 +15,4 @@ A simple and customizable **password/crack wordlist generator** written in Pytho
 Generate a wordlist with 4-letter combinations of lowercase letters:
 
 ```bash
-$ python3 drunch.py -l 4 -c abcdefghijklmnopqrstuvwxyz
+$ python3 drunch.py

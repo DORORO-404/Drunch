@@ -1,23 +1,37 @@
 # ===== Drunch Wordlist Generator =====
 
-# Importing itertools for generating combinations
 import itertools
+import pyfiglet
 
 # ANSI Escape Codes for color formatting
 RED = "\033[1;31m"
 GREEN = "\033[1;32m"
 YELLOW = "\033[1;33m"
 BLUE = "\033[1;34m"
+CYAN = "\033[1;36m"
+MAGENTA = "\033[1;35m"
 RESET = "\033[0m"
 
-# Function to print the title with red bold color
+# Print the ASCII logo banner using pyfiglet
+def print_banner():
+    ascii_banner = pyfiglet.figlet_format("Drunch")
+    print(f"{MAGENTA}{ascii_banner}{RESET}")
+    box = f"""{CYAN}
+  ╔═══════════════════════════════════════╗
+  ║     {MAGENTA}Drunch - Wordlist Generator{CYAN}       ║
+  ║     {MAGENTA}Developed by: DORORO{CYAN}              ║
+  ║     {MAGENTA}Github: DORORO-404{CYAN}                ║
+  ║     {MAGENTA}Version: 1.0{CYAN}                      ║
+  ╚═══════════════════════════════════════╝{RESET}
+    """
+    print(box)
+
+# Print the welcome title
 def print_title():
-    """Display the welcome title."""
     print(f"{RED}[+] ====== {BLUE}Welcome to Drunch Wordlist Generator{RED} ====== [+]{RESET}")
 
-# Function to get the minimum length of generated words
+# Get minimum word length from user
 def get_min_length():
-    """Prompt the user to enter the minimum word length."""
     while True:
         try:
             min_length = int(input(f"{YELLOW}Enter minimum length: {RESET}"))
@@ -25,9 +39,8 @@ def get_min_length():
         except ValueError:
             print(f"{RED}❌ Invalid input. Please enter a valid number.{RESET}")
 
-# Function to get the maximum length of generated words
+# Get maximum word length from user
 def get_max_length():
-    """Prompt the user to enter the maximum word length."""
     while True:
         try:
             max_length = int(input(f"{YELLOW}Enter maximum length: {RESET}"))
@@ -35,9 +48,8 @@ def get_max_length():
         except ValueError:
             print(f"{RED}❌ Invalid input. Please enter a valid number.{RESET}")
 
-# Function to let the user choose characters for wordlist generation
+# Let the user choose character set
 def get_chars():
-    """Prompt user to choose character set for wordlist generation."""
     print(f"\n{YELLOW}Choose character set:{RESET}")
     print(f"{BLUE}[1]{RESET} Numbers only (0-9)")
     print(f"{BLUE}[2]{RESET} Letters only (a-z)")
@@ -57,14 +69,12 @@ def get_chars():
         except ValueError:
             print(f"{RED}❌ Invalid input. Please enter a valid number.{RESET}")
 
-# Function to get the file name for saving the wordlist
+# Get file name from user
 def get_file_name():
-    """Prompt user to enter the file name to save wordlist."""
     return input(f"\n{YELLOW}Enter file name: {RESET}")
 
-# Function to generate the wordlist
+# Generate and save the wordlist
 def generate_wordlist():
-    """Generate and save the wordlist based on user input."""
     min_length = get_min_length()
     max_length = get_max_length()
     chars = get_chars()
@@ -79,9 +89,9 @@ def generate_wordlist():
 
     print(f"{GREEN}[✓] Wordlist saved as '{file_name}.txt'.{RESET}")
 
-# Main function
+# Main logic controller
 def main():
-    """Main function to drive the program."""
+    print_banner()
     print_title()
 
     while True:
@@ -89,14 +99,14 @@ def main():
 
         while True:
             repeat = input(f"\n{YELLOW}Generate another wordlist? [Y/n]: {RESET}").strip().lower()
-            if repeat == "y" or repeat == "":  # User wants to generate another wordlist
+            if repeat == "y" or repeat == "":
                 break
-            elif repeat == "n":  # User doesn't want to generate more wordlists
+            elif repeat == "n":
                 print(f"{GREEN}Thank you for using Drunch Wordlist Generator. Goodbye!{RESET}")
                 return
-            else:  # Invalid input
+            else:
                 print(f"{RED}❌ Invalid input. Please enter 'y' or 'n'.{RESET}")
 
 # Run the script
-if __name__ == "__main__":  
+if __name__ == "__main__":
     main()

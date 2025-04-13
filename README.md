@@ -85,9 +85,11 @@ Feel free to open issues for any bugs or feature requests.
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📁 Project Structure
+```bash
 Drunch/
 ├── drunch.py              # Main Python script for the wordlist generator
 ├── README.md              # Project documentation
 ├── LICENSE                # MIT License file
 └── wordlists/             # Folder where generated wordlists are saved
     └── passwords.txt      # Example output file
+```
